@@ -15,7 +15,7 @@ The goal is to preprocess ATLAS collision data and apply a **Transformer-based u
 - **ML Model:** TabTransformer architecture tailored for tabular HEP data  
 - **Objective:** Train on Standard Model background only, detect anomalies as events with high reconstruction loss  
 - **Features:** Uses low-level physics variables such as jet/lepton kinematics, missing transverse energy, calorimeter deposits, and event topology  
-- **Output:** Structured datasets (`.csv`, `.h5`) ready for anomaly detection downstream tasks
+- **Output:** Selected variables saved via ROOT RDataFrame snapshots, then fed into the ML model using TMVA TensorFlow batch generators for efficient training and evaluation  
 
 ---
 
@@ -24,6 +24,8 @@ The goal is to preprocess ATLAS collision data and apply a **Transformer-based u
 - Data extraction and selection of physics variables  
 - Parallel processing of large `.root` datasets using Dask and ROOT RDataFrame  
 - Preprocessing and filtering of collision events  
+- Saving selected variables with ROOT RDataFrame snapshot method  
+- Feeding snapshot files into the ML pipeline via TMVA TensorFlow batch generators  
 - Transformer-based reconstruction model for anomaly detection  
 - Analysis of model performance and interpretation of results  
 
@@ -33,10 +35,10 @@ The goal is to preprocess ATLAS collision data and apply a **Transformer-based u
 
 ### Key Libraries & Frameworks
 
-- ROOT and Dask for efficient HEP data handling  
-- pandas, numpy for data manipulation  
+- ROOT and Dask for efficient HEP data handling 
 - matplotlib, seaborn for visualization  
-- PyTorch for implementing the Transformer model
+- tensorflow for implementing the Transformer model  
+- TMVA TensorFlow batch generators for scalable input pipeline  
 
 ### How to run
 
