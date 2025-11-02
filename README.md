@@ -38,7 +38,8 @@ The goal is to preprocess ATLAS collision data and apply a **Transformer-based u
 - ROOT and Dask for efficient HEP data handling 
 - matplotlib, seaborn for visualization  
 - tensorflow for implementing the Transformer model  
-- TMVA TensorFlow batch generators for scalable input pipeline  
+- TMVA TensorFlow batch generators for scalable input pipeline
+- use container : gitlab-registry.cern.ch/asradhak/ml_cern_ch_docker_image@sha256:e97a96db2ff0bcb7270a22d943679a2e0483d26fcfcf650028c7ce6e39522ca0
 
 ### How to run
 
